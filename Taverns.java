@@ -11,6 +11,7 @@ import cpw.mods.fml.common.event.FMLInitializationEvent;
 import cpw.mods.fml.common.event.FMLPostInitializationEvent;
 import cpw.mods.fml.common.event.FMLPreInitializationEvent;
 import cpw.mods.fml.common.network.NetworkMod;
+import cpw.mods.fml.common.registry.VillagerRegistry;
 
 /**
  * Taverns
@@ -31,8 +32,6 @@ public class Taverns
 	public static final String releaseDate = "19-Jul-2013";
 	Settings config;
 
-    // Blocks, Items, Creative tab, etc
-	
     public Taverns() {
         instance = this;
     }
@@ -44,11 +43,12 @@ public class Taverns
     }
 
     @Init
-    public void load(FMLInitializationEvent event) {
-
-        // register structures & entities
-        //GraveStoneStructures.getInstance();
-        //GraveStoneEntity.getInstance();
+    public void load(FMLInitializationEvent event) 
+    {
+    	if(config.generateTaverns){
+    		TavernCreationHandler tavernCreator = new TavernCreationHandler();
+    		VillagerRegistry.instance().registerVillageCreationHandler(tavernCreator);    	    
+    	}
 
         proxy.registerRenderHandlers();
     }
