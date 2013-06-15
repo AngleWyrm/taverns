@@ -29,7 +29,7 @@ public class Taverns
     public static ServerProxy proxy;
 	public static final String modID = "Taverns";
 	public static final String releaseDate = "19-Jul-2013";
-	Configuration config;
+	Settings config;
 
     // Blocks, Items, Creative tab, etc
 	
@@ -39,11 +39,8 @@ public class Taverns
 
     @PreInit
     public void preInit(FMLPreInitializationEvent event) {
-        config = new Configuration(event.getSuggestedConfigurationFile());
-        config.load();
-        int baseID;
-        baseID = config.getBlock("BaseID", 1200).getInt();
-        config.save();
+        config = new Settings(event.getSuggestedConfigurationFile());
+        config.loadSettings();
     }
 
     @Init
