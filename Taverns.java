@@ -1,5 +1,7 @@
 package mods.taverns;
 
+import net.minecraft.util.WeightedRandomChestContent;
+import net.minecraftforge.common.ChestGenHooks;
 import net.minecraftforge.common.Configuration;
 import net.minecraftforge.common.MinecraftForge;
 import cpw.mods.fml.common.Mod;
@@ -29,7 +31,7 @@ public class Taverns
     @SidedProxy(clientSide = "mods.taverns.ClientProxy", serverSide = "mods.taverns.ServerProxy")
     public static ServerProxy proxy;
 	public static final String modID = "Taverns";
-	public static final String releaseDate = "19-Jul-2013";
+	public static final String releaseDate = "17-Jun-2013";
 	Settings config;
 
     public Taverns() {
@@ -47,7 +49,8 @@ public class Taverns
     {
     	if(config.generateTaverns){
     		TavernCreationHandler tavernCreator = new TavernCreationHandler();
-    		VillagerRegistry.instance().registerVillageCreationHandler(tavernCreator);    	    
+    		VillagerRegistry.instance().registerVillageCreationHandler(tavernCreator);
+    		ComponentVillageTavern.registerTavernChest();
     	}
 
         proxy.registerRenderHandlers();
@@ -56,5 +59,9 @@ public class Taverns
     @Mod.PostInit
     public void postInit(FMLPostInitializationEvent event) {
         //if (Loader.isModLoaded("TwilightForest|MoCreatures")) {}
+    }
+    
+    public String Version(){
+    	return releaseDate;
     }
 }

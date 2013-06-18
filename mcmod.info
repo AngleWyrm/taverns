@@ -1,0 +1,17 @@
+[
+{
+  "modid": "Taverns",
+  "name": "Village Taverns",
+  "description": "Adds Tavens to your Minecraft Villages",
+  "version": "17-Jun-2013",
+  "mcversion": "1.5.2",
+  "logoFile": "/mods/taverns/textures/logo.png",
+  "url": "",
+  "updateUrl": "",
+  "authors": ["AngleWyrm"],
+  "credits": "Mojang, for giving us a rollicking good time",
+  "parent": "",
+  "screenshots": [],
+  "dependencies": []
+}
+]
