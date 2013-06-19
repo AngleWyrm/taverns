@@ -6,7 +6,10 @@ import net.minecraftforge.common.Configuration;
 public class Settings extends Configuration 
 {
 	// Settings
-	public boolean generateTaverns;
+	public static boolean generateTaverns;
+	
+	// Installed mods
+	public static boolean minecraftComesAlive = false;
 	
 	public Settings(File configurationFile) {
 		super(configurationFile);

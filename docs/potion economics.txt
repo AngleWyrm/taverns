@@ -1,0 +1,10 @@
+64 Mundane potion
+32 Thick potion
+16 Awkward potion
+8193 Regeneration
+8194 Swiftness
+8195 Fire Resistance
+8197 Instant health
+8262 Night Vision
+
+MCA 987 fertility potion

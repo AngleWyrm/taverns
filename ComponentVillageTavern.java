@@ -224,7 +224,7 @@ public class ComponentVillageTavern extends ComponentVillage
 
 	// TODO: make a bar wench
     protected int getVillagerType(int par1){
-        return 1;
+        return VillageHandlerBarWench.BAR_WENCH;
     }
 
 	// TODO: identify desert biome to return sand, possibly others
