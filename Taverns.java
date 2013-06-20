@@ -32,7 +32,7 @@ public class Taverns
     @SidedProxy(clientSide = "mods.taverns.ClientProxy", serverSide = "mods.taverns.ServerProxy")
     public static ServerProxy proxy;
 	public static final String modID = "Taverns";
-	public static final String releaseDate = "18-Jun-2013";
+	public static final String releaseDate = "20-Jun-2013";
 	public static Settings config;
 
     public Taverns() {
@@ -67,6 +67,9 @@ public class Taverns
     public void postInit(FMLPostInitializationEvent event) {
         if (Loader.isModLoaded("MCA")){
         	config.minecraftComesAlive = true;
+        }
+        if(Loader.isModLoaded("BiomesOPlenty")){
+        	config.biomesOPlenty = true;
         }
     }
     

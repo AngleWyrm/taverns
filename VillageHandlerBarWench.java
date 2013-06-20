@@ -3,6 +3,8 @@ package mods.taverns;
 import java.util.List;
 import java.util.Random;
 
+import biomesoplenty.api.Items;
+
 import net.minecraft.entity.passive.EntityVillager;
 import net.minecraft.item.Item;
 import net.minecraft.item.ItemStack;
@@ -31,6 +33,30 @@ public class VillageHandlerBarWench implements VillagerRegistry.IVillageCreation
 		recipeList.add(new MerchantRecipe(
 				new ItemStack(Item.emerald, 1),
 				new ItemStack(Item.bakedPotato, 32)));
+		recipeList.add(new MerchantRecipe(
+				new ItemStack(Item.emerald, 1),
+				new ItemStack(Item.magmaCream, 6)));
+		
+		// Quest type trades
+		recipeList.add(new MerchantRecipe(
+				new ItemStack(Item.bone, 12),
+				new ItemStack(Item.emerald,1)));
+		recipeList.add(new MerchantRecipe(
+				new ItemStack(Item.lightStoneDust, 12),
+				new ItemStack(Item.emerald,1)));
+		recipeList.add(new MerchantRecipe(
+				new ItemStack(Item.blazePowder, 12),
+				new ItemStack(Item.emerald, 1)));
+		
+		// Mod tie-in recipes
+		/*
+		if(Taverns.config.biomesOPlenty){
+			recipeList.add(new MerchantRecipe(
+					new ItemStack(Items.berries, 24),
+					new ItemStack(Item.emerald, 1)));
+		}
+		*/
+		
 /*
  * ID numbers are subject to change without notice :(		
 		if(Taverns.config.minecraftComesAlive){

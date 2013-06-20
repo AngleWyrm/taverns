@@ -10,6 +10,7 @@ public class Settings extends Configuration
 	
 	// Installed mods
 	public static boolean minecraftComesAlive = false;
+	public static boolean biomesOPlenty = false;
 	
 	public Settings(File configurationFile) {
 		super(configurationFile);
