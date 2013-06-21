@@ -32,7 +32,7 @@ public class Taverns
     @SidedProxy(clientSide = "mods.taverns.ClientProxy", serverSide = "mods.taverns.ServerProxy")
     public static ServerProxy proxy;
 	public static final String modID = "Taverns";
-	public static final String releaseDate = "20-Jun-2013";
+	public static final String releaseDate = "21-Jun-2013";
 	public static Settings config;
 
     public Taverns() {

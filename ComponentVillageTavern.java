@@ -65,7 +65,7 @@ public class ComponentVillageTavern extends ComponentVillage
             if (averageGroundLevel < 0){
                 return true;
             }
-            boundingBox.offset(0, this.averageGroundLevel - boundingBox.maxY + HEIGHT - 1, 0);
+            boundingBox.offset(0, this.averageGroundLevel - boundingBox.maxY + HEIGHT - 2, 0);
         }
 
 		
